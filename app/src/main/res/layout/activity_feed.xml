@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".FeedActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/feedLogoutBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                android:src="@drawable/ic_logout" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="16"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_tags"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:entries="@array/categories"
+                android:gravity="center" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_form"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search your recipe..."
+        app:searchIcon="@drawable/ic_search">
+
+    </androidx.appcompat.widget.SearchView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/goToUploaded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3"
+            android:backgroundTint="@color/yellow"
+            android:text="MY RECIPES"
+            android:textColor="#4D4D4D"
+            app:cornerRadius="10dp" />
+
+        <ImageView
+            android:id="@+id/imageView_add_new_recipe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="60dp"
+            android:minHeight="50dp"
+            android:src="@drawable/ic_add_new_recipe" />
+
+        <Button
+            android:id="@+id/goToFavourites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="3"
+            android:backgroundTint="@color/yellow"
+            android:text="Favourites"
+            android:textColor="#4D4D4D"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp" />
+
+</LinearLayout>

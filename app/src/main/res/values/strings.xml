@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Kitchen Genius</string>
+    <string name="api_key">ad99611725964f97bdeb031cda38a0ec</string>
+
+    <string-array name="categories">
+        <item>main course</item>
+        <item>side dish</item>
+        <item>dessert</item>
+        <item>appetizer</item>
+        <item>salad</item>
+        <item>bread</item>
+        <item>breakfast</item>
+        <item>soup</item>
+        <item>beverage</item>
+        <item>sauce</item>
+        <item>marinade</item>
+        <item>fingerfood</item>
+        <item>snack</item>
+        <item>drink</item>
+    </string-array>
+    <string-array name="unit_options">
+        <item>Gram</item>
+        <item>Kilogram</item>
+        <item>Ounce</item>
+        <item>Pound</item>
+        <item>Milliliter</item>
+        <item>Liter</item>
+        <item>Fluid Ounce</item>
+        <item>Cup</item>
+        <item>Teaspoon</item>
+        <item>Tablespoon</item>
+        <item>Piece</item>
+        <item>Clove</item>
+        <item>Package</item>
+    </string-array>
+    <string-array name="servings_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

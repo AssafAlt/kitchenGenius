@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecipeDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView_dish_name"
+                android:text="Recipe Name"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:textColor="@color/yellow_orange"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/textView_dish_source"
+                android:text="Source"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="20dp"
+                android:background="@drawable/edit_form"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView_dish_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="5dp"
+                    android:padding="20dp"
+                    app:shapeAppearanceOverlay="@style/roundedImageView"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:text="Instructions"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:textSize="30sp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_dish_instructions"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"/>
+            <TextView
+                android:text="Ingredients"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:textSize="30sp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_dish_ingredients"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
